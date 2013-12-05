@@ -1,12 +1,15 @@
 # Rotates a 4x4 matrix 90 degrees to the right
 
-def init_matrix(matrix):
+def create_matrix():
+    # Initialize 4x4 matrix
+    matrix = [[0]*4 for i in range(4)]
     currIndex = 0
     letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P']
     for posX in range(4):
         for posY in range(4):
             matrix[posX][posY] = letters[currIndex]
             currIndex += 1
+    return matrix
 
 def format_matrix(matrix):
     for posX in range(4):
@@ -53,10 +56,7 @@ def reflect_over_right_diagonal(matrix):
                 matrix[posX][posY] = tmp
 
 if __name__ == "__main__":
-    # Initialize 4x4 matrix
-    matrix = [[0]*4 for i in range(4)]
-    
-    init_matrix(matrix)
+    matrix = create_matrix()
     print "Original:"
     format_matrix(matrix)
 
