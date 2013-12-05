@@ -27,7 +27,7 @@ void print_matrix(char matrix[4][4])
     for(i=0; i < 4; i++)
     {
         for(j=0; j < 4; j++)
-            printf("%c\t", matrix[i][j]);
+            printf("%-3c", matrix[i][j]);
         printf("\n");
     }
     printf("\n");
